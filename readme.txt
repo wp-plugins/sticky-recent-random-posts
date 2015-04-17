@@ -1,7 +1,6 @@
 === Sticky Recent Random Posts ===
 Contributors: mahavirnahata
 Tags: random post, sticky random posts, recent post, recent random post, sticky recent random post, random custom post, sticky custom post, sticky bar
-Donate link: http://offersday.in/sticky-recent-random-posts/
 Requires at least: 3.5
 Tested up to: 4.1.1
 Stable tag: trunk
@@ -12,7 +11,7 @@ License: GPL2
 == Description ==
 <strong>Sticky Recent Random Posts</strong> is awesome Plugin that let users to show sticky bar at bottom, that sticky bar will contain random Title of Recent Posts(Including Custom Post Types). This plugin will help to engage more users and help to reduce Bounce rate.
 
-This plugin comes with an Setting Page through which user can customize Appearance and other settings. This option page is located under Settings Menu.
+This plugin comes with a Setting Page through which user can customize Appearance and other settings. This option page is located under Settings Menu.
 
 What this plugin do :
 This plugin will show sticky bar at bottom part of page, that sticky bar will contain `Title` of recent post, that recent post is randomly selected. You also have option to choose whether to open that link in current window or new window. You can customize colors, Opacity, number of last recent post to shuffle from and other settings.
@@ -21,7 +20,7 @@ You will love this plugin for sure, as it will decrease Bounce Rate of your blog
 
 <a href="http://offersday.in/sticky-recent-random-posts/" title="Plugin Demo" target="_blank">You can see the live working demo here.</a>
 
-Hoping that you will like this plugin. Don`t forget to rate this plugin or write your valuable opinion that will enable us to make it more useful in future release.
+Hoping that you will like this plugin. Don`t forget to rate this plugin or write your valuable opinion that will guide us to make it more useful in future release.
 
 == Installation ==
 1. Download recent release(zip file) of this plugin from wordpress plugin repository.
