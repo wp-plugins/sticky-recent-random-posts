@@ -18,7 +18,7 @@ This plugin will show sticky bar at bottom part of page, that sticky bar will co
 
 You will love this plugin for sure, as it will decrease Bounce Rate of your blog and will engage more visitors by displaying random post. Due to its sticky behaviour it will capture attention of user easily. 
 
-<a href="http://offersday.in/sticky-recent-random-posts/" title="Plugin Demo" target="_blank">You can see the live working demo here.</a>
+<a href="http://offersday.in/sticky-recent-random-posts/" title="Plugin Demo" target="_blank">You can see Live working demo here.</a>
 
 Hoping that you will like this plugin. Don`t forget to rate this plugin or write your valuable opinion that will guide us to make it more useful in future release.
 
