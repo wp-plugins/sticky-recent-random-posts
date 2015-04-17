@@ -3,35 +3,63 @@ Contributors: mahavirnahata
 Tags: random post, sticky random posts, recent post, recent random post, sticky recent random post
 Donate link: http://offersday.in/sticky-recent-random-posts/
 Requires at least: 3.5
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: trunk
 License: GPL2
 
-Sticky Recent Random Posts is awesome Plugin that let users to show sticky bar at bottom.
+`Sticky Recent Random Posts` Plugin lets user to add sticky bar at bottom.
 
 == Description ==
-Sticky Recent Random Posts is awesome Plugin that let users to show sticky bar at bottom, that sticky bar will contain random Title of Recent Posts(Including Custom Post Types). This plugin will help to engage more users and help help to reduce Bounce rate.
+`Sticky Recent Random Posts` is awesome Plugin that let users to show sticky bar at bottom, that sticky bar will contain random Title of Recent Posts(Including Custom Post Types). This plugin will help to engage more users and help to reduce Bounce rate.
 
-This plugin comes with Option Page through which user can customize Appearance and other settings. This option page is located under Settings Menu.
+This plugin comes with an Setting Page through which user can customize Appearance and other settings. This option page is located under Settings Menu.
+
+What this plugin do :
+This plugin will show sticky bar at bottom part of page, that sticky bar will contain `Title` of recent post, that recent post is randomly selected. You also have option to choose whether to open that link in current window or new window. You can customize colors, Opacity, number of last recent post to shuffle from and other settings.
+
+You will love this plugin for sure, as it will decrease Bounce Rate of your blog and will engage more visitors by displaying random post. Due to its sticky behaviour it will capture attention of user easily. 
+
+Hoping that you will like this plugin. Don`t forget to rate this plugin or write your valuable opinion that will enable us to make it more useful in future release.
 
 == Installation ==
-Simply Install the plugin and activate it. You can customize other settings by going to \"Settings\" -> \"Sticky Recent Random Posts\" Page.
+1. Download recent release(zip file) of this plugin from wordpress plugin repository.
+2. Unzip and Upload folder naming `sticky-recent-random-posts` to the `/wp-content/plugins/` directory.
+3. Activate the plugin through the `Plugins` menu in WordPress.
+4. Change appearance of plugin by moving to `Settings ->Sticky Recent Random Posts`
+
 
 == Frequently Asked Questions ==
-Select Background Color : Select sticky bar background color.
+What is `Background Color`
+Background color setting allows you to change background color of sticky bar.
 
-Select Top Border Color : Sticky bar top border color.
+What is `Top Border Color`
+To make that sticky bar more appealing you can choose different color of top border, hence it will attract more visitors.
 
-Select Background Color Opacity : Opacity of sticky bar.
+What is `Background Color Opacity`
+It takes value between 0.00 to 1.00, You can customize the opacity(transparency) of sticky bar. 0=Full Transparent 1=Opaque
 
-Select Title Text Color : Color of Post title
+What is `Title Text Color`
+This options lets you customize the color of `Title`.
 
-Type Trending Now Text : Text displayed before Post Title (Default : Trending Now)
+What is `Trending Now Text ` 
+This text is prepended before `Title`. You can type anything of your choice or leave it blank if you are not interested in displaying it. (Default : `Trending Now : `)
 
-Trending Now Text Color : Color of Trending Now text.
+What is `Trending Now Text Color`
+If you have set `Trending Now Text`, you can customize its color using this option.
 
-Open Link In : Whether to open link in New Tab or existing one.
+What is `Open Link In`
+This option allow you to decide whether to open that random post in current window or in new window/tab.
 
-Number Of Posts To Suffle : Maximum number of recent posts to choose 1 random post.
+What is `Number Of Posts To Shuffle`
+This option lets you decide how many recent random post will be used to pick 1 random post.
 
-Select Post Type To Include : Type of post to include in Random Search.
+What is `Select Post Type To Include`
+You can also add custom post types using this option.
+
+How random post is calculated :
+This plugin first check the value of option `Number Of Posts To Shuffle`, and later it checks `Post Types` that you selected, Based on these two options this plugin retrieve random post that will be displayed to user in front end.
+
+
+
+== Changelog ==
+This is first verison
