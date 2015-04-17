@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Sticky Recent Random Posts
-Plugin URI: http://www.offersday.in
+Plugin URI: http://offersday.in/sticky-recent-random-posts/
 Description: This plugin will show random recent post as sticky bar. you can customize color and other properties of sticky bar.
 Version: 1.0
 Author: Mahavir Nahata
