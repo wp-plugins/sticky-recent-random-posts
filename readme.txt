@@ -1,6 +1,6 @@
 === Sticky Recent Random Posts ===
 Contributors: mahavirnahata
-Tags: random post, sticky random posts, recent post, recent random post, sticky recent random post
+Tags: random post, sticky random posts, recent post, recent random post, sticky recent random post, random custom post, sticky custom post, sticky bar
 Donate link: http://offersday.in/sticky-recent-random-posts/
 Requires at least: 3.5
 Tested up to: 4.1.1
