@@ -30,34 +30,34 @@ Hoping that you will like this plugin. Don`t forget to rate this plugin or write
 
 
 == Frequently Asked Questions ==
-What is `Background Color`
+What is `Background Color`<br>
 Background color setting allows you to change background color of sticky bar.
 
-What is `Top Border Color`
+What is `Top Border Color`<br>
 To make that sticky bar more appealing you can choose different color of top border, hence it will attract more visitors.
 
-What is `Background Color Opacity`
+What is `Background Color Opacity`<br>
 It takes value between 0.00 to 1.00, You can customize the opacity(transparency) of sticky bar. 0=Full Transparent 1=Opaque
 
-What is `Title Text Color`
+What is `Title Text Color`<br>
 This options lets you customize the color of `Title`.
 
-What is `Trending Now Text ` 
+What is `Trending Now Text ` <br>
 This text is prepended before `Title`. You can type anything of your choice or leave it blank if you are not interested in displaying it. (Default : `Trending Now : `)
 
-What is `Trending Now Text Color`
+What is `Trending Now Text Color`<br>
 If you have set `Trending Now Text`, you can customize its color using this option.
 
-What is `Open Link In`
+What is `Open Link In`<br>
 This option allow you to decide whether to open that random post in current window or in new window/tab.
 
-What is `Number Of Posts To Shuffle`
+What is `Number Of Posts To Shuffle`<br>
 This option lets you decide how many recent random post will be used to pick 1 random post.
 
-What is `Select Post Type To Include`
+What is `Select Post Type To Include`<br>
 You can also add custom post types using this option.
 
-How random post is calculated :
+How random post is calculated :<br>
 This plugin first check the value of option `Number Of Posts To Shuffle`, and later it checks `Post Types` that you selected, Based on these two options this plugin retrieve random post that will be displayed to user in front end.
 
 
