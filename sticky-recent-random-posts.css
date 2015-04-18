@@ -27,7 +27,7 @@
 }
 #mn_submit_form
 {
-  width: 200px;
+  width: 250px;
   margin-top: 20px;
   font-weight: bold;
   background: #1630E2;
@@ -40,4 +40,8 @@
 	color: #f00;
 	margin-top: 10px;
 	text-align: center;
+}
+.depends_on_mn_display_bar_option
+{
+	display: none;
 }

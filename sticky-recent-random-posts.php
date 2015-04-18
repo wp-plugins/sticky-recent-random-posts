@@ -4,7 +4,7 @@
 Plugin Name: Sticky Recent Random Posts
 Plugin URI: http://offersday.in/sticky-recent-random-posts/
 Description: This plugin will show random recent post as sticky bar. you can customize color and other properties of sticky bar.
-Version: 1.0
+Version: 1.1
 Author: Mahavir Nahata
 Author URI: www.offersday.in
 License: GPL2
@@ -28,7 +28,7 @@ License: GPL2
 
 function mn_plugin_activation()
 {
-  $default_options=array("mn_wrapper_background_color"=>"#000000","mn_wrapper_border_color"=>"#24B6AC","mn_wrapper_background_color_opacity"=>"0.6","mn_title_text_color"=>"#ffffff","mn_trending_now_text"=>"Trending Now : ","mn_trending_now_text_color"=>"#ff8b02","mn_open_link_in"=>"_blank","mn_number_of_posts"=>"10","mn_post_types"=>array('post'=>'post'));
+  $default_options=array("mn_wrapper_background_color"=>"#000000","mn_wrapper_border_color"=>"#24B6AC","mn_wrapper_background_color_opacity"=>"0.9","mn_title_text_color"=>"#ffffff","mn_trending_now_text"=>"Trending Now : ","mn_trending_now_text_color"=>"#ff8b02","mn_open_link_in"=>"_blank","mn_number_of_posts"=>"10","mn_post_types"=>array('post'=>'post'),"mn_display_bar_option"=>"immediately","mn_display_bar_duration"=>"1500","mn_display_bar_animation_duration"=>"600","mn_hide_sticky_bar_below"=>"640px");
   update_option('mn_sticky_recent_posts', serialize($default_options));
 }
 register_activation_hook(__FILE__,'mn_plugin_activation');
@@ -98,6 +98,36 @@ function mn_display_custom_page_content()
 			<?php }?>
 			</td>
 		</tr>
+		
+		<tr class="mn_individual_block">
+		<td><label for="mn_display_bar_option">Display Sticky Bar : </label> </td>
+			<td> <select name="mn_display_bar_option" id="mn_display_bar_option">
+					<option <?php if($get_saved_data['mn_display_bar_option']=='immediately') echo "selected";?> value="immediately">Immediately</option>
+					<option <?php if($get_saved_data['mn_display_bar_option']=='scroll') echo "selected";?> value="scroll">After User Scroll</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr class="mn_individual_block depends_on_mn_display_bar_option">
+		<td><label for="mn_display_bar_duration">Display Sticky Bar Scroll Duration(In Milisecond) : </label> </td>
+		<td>
+		<input type="text" name="mn_display_bar_duration" value="<?php echo $get_saved_data['mn_display_bar_duration'];?>" id="mn_display_bar_duration">
+		</td>
+		</tr>
+
+		<tr class="mn_individual_block depends_on_mn_display_bar_option">
+		<td><label for="mn_display_bar_animation_duration">Display Sticky Bar Animation Duration(In Milisecond) : </label> </td>
+		<td>
+		<input type="text" name="mn_display_bar_animation_duration" value="<?php echo $get_saved_data['mn_display_bar_animation_duration'];?>" id="mn_display_bar_animation_duration">
+		</td>
+		</tr>
+		
+		<tr class="mn_individual_block">
+			<td><label for="mn_hide_sticky_bar_below">Hide Sticky Bar Below This Resolution (Write in px) : <br>Tips : Input "0px" if you want to display in all devices</label></td>
+			<td> <input type="text" name="mn_hide_sticky_bar_below" value="<?php echo $get_saved_data['mn_hide_sticky_bar_below'];?>" id="mn_hide_sticky_bar_below"></td>
+		</tr>
+	
+
 		<tr  class="mn_individual_block">
 		<td colspan="2"><input type="submit" value="Update Options" id="mn_submit_form"></td>
 		</tr>
@@ -138,6 +168,12 @@ if(!empty($mn_recent_posts))
 $mn_title_url=get_permalink($mn_recent_posts[0]["ID"]);
 $mn_message='<span id="mn_trending_now_container">'.$get_saved_data["mn_trending_now_text"].'</span> <span id="mn_random_post_title">'.$mn_recent_posts[0]["post_title"].'</span>';
 
+$sticky_bar_left_val="0%";
+if($get_saved_data["mn_display_bar_option"]=="scroll")
+{
+	$sticky_bar_left_val="-110%";
+}
+
 $html_str=<<<MKN
  <style type="text/css">
     #mn_sticky_bar_wrapper
@@ -147,7 +183,7 @@ $html_str=<<<MKN
 		  position: fixed;
 		  width: 100%;
 		  bottom: 0px;
-		  left: 0%;
+		  left: {$sticky_bar_left_val};
 		  height: auto;
 		  text-align: center;
 		  padding: 6px 3px;
@@ -165,13 +201,31 @@ $html_str=<<<MKN
 	{
 		color: {$get_saved_data["mn_trending_now_text_color"]};
 	}
-	    </style>
+	@media screen and (max-width: {$get_saved_data["mn_hide_sticky_bar_below"]}) {
+ 	 #mn_sticky_bar_wrapper {
+    	display: none;
+ 	 }
+	}
+   </style>
 	     <div id="mn_sticky_bar_wrapper">
 		<a href="{$mn_title_url}" target="{$get_saved_data['mn_open_link_in']}" id="mn_sticky_bar_title_anchor">{$mn_message}</a>
 	</div>
 MKN;
 echo $html_str;	
-}
+	
+	if($get_saved_data["mn_display_bar_option"]=="scroll")
+	{
+		if(!wp_script_is('jquery')) {
+				wp_enqueue_script("jquery");
+		} 
+		wp_enqueue_script('mn_arp_script_front', plugins_url('sticky-recent-random-posts-front.js', __FILE__ ),array('jquery'),false,true); 
+		$mn_sticky_js_dispaly_obj = array(
+	    "mn_display_bar_duration"=>$get_saved_data["mn_display_bar_duration"],
+	    "mn_display_bar_animation_duration"=>$get_saved_data["mn_display_bar_animation_duration"]
+		);
+		wp_localize_script('mn_arp_script_front', 'mn_post_display_options_obj',$mn_sticky_js_dispaly_obj);
+	}
+ }
 }
 add_action('wp_footer', 'mn_add_sticky_to_footer');
 ?>

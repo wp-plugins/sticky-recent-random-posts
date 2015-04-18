@@ -57,10 +57,27 @@ This option lets you decide how many recent random post will be used to pick 1 r
 What is `Select Post Type To Include`<br>
 You can also add custom post types using this option.
 
+What is `Display Sticky Bar`<br>
+This option lets you choose whether to display `Sticky Bar` immediately or after `User Scroll`. 
+
+What is `Display Sticky Bar Scroll Duration` : <br>
+This option is activated when you choose `After User Scroll` option. It accepts only Numeric value, and value is in Milisecond. 1 second = 1000 miliseconds. After how much time animation will start after user scroll.
+
+What is `Display Sticky Bar Animation Duration` : <br>
+This option is activated when you choose `After User Scroll` option. It accepts only Numeric value, and value is in Milisecond. 1 second = 1000 miliseconds. Its the animation duration.
+
+What is `Hide Sticky Bar Below This Resolution` : <br>
+This option let user to define resolution below which sticky bar will not visible. If you want to display sticky bar on all resolutions, input 0px. Please use "px" suffix when inputing any value. Default is 640px.
+
 How random post is calculated :<br>
 This plugin first check the value of option `Number Of Posts To Shuffle`, and later it checks `Post Types` that you selected, Based on these two options this plugin retrieve random post that will be displayed to user in front end.
 
 
 
 == Changelog ==
-This is first verison
+2 more options added, 
+1) Display Immediately or after user scroll event. 
+2) Hide sticky bar below some resolution.
+
+== Upgrade Notice ==
+2 more options added, Update plugin to view those options.
