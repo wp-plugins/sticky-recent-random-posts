@@ -2,7 +2,7 @@
 Contributors: mahavirnahata
 Tags: random post, sticky random posts, recent post, recent random post, sticky recent random post, random custom post, sticky custom post, sticky bar
 Requires at least: 3.5
-Tested up to: 4.1.1
+Tested up to: 4.3
 Stable tag: trunk
 License: GPL2
 
